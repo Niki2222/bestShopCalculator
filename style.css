@@ -6,6 +6,10 @@
 :root {
     --box-shaddow-color: lightgray;
     --menu-color: rgb(0, 149, 255);
+    --light-color: #fff;
+    --light-text: gray;
+    --benefit-pink-color: rgb(221, 57, 123);
+    --benefit-green-color: rgb(57, 221, 186);
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -33,7 +37,7 @@ a {
 }
 .nav li {
     border-bottom: 2px solid var(--box-shaddow-color);
-    color: var(--menu-color);
+    color: var(--light-text);
     font-size: .8rem;
     margin: .5rem;
     padding: .5rem;
@@ -62,5 +66,95 @@ a {
     }
     .nav li {
         border: none;
+    }
+}
+
+/* Sales section */
+.sales {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+.sales h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+    
+}
+.sales p {
+    margin: 1rem 0 2rem 0;
+}
+.sales button {
+    background-color: var(--menu-color);
+    border-radius: 30px;
+    border: 1px solid var(--menu-color);
+    color: var(--light-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: .9rem;
+    width: 100%;
+}
+.sales img {
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .sales button {
+        max-width: 600px;
+    }
+}
+
+/* Benefits section */
+.benefits {
+    text-align: center;
+    margin-top: 1.3rem;
+    padding: 1rem;
+}
+.benefits h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.benefits_content {
+    margin-top: 2rem;
+}
+.benefits img {
+    display: block;
+    margin: 2rem auto;
+}
+.pink, .blue, .green {
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.pink {
+    background-color: var(--benefit-pink-color);
+}
+.blue {
+    background-color: var(--menu-color);
+}
+.green {
+    background-color: var(--benefit-green-color);
+}
+.bold {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.lighter {
+    color: var(--light-text);
+    font-weight: lighter;
+}
+.benefits img {
+    position: relative;
+    top: -95px;
+    right: -20px;
+    margin-bottom: -70px;
+}
+@media screen and (min-width: 768px) {
+    .benefits_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .benefits h2 {
+        margin: 2rem;
     }
 }

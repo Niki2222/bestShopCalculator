@@ -113,7 +113,7 @@ a {
     font-weight: lighter;
 }
 .benefits_content {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .benefits img {
     display: block;
@@ -138,6 +138,9 @@ a {
     font-weight: bold;
     letter-spacing: 2px;
 }
+.bold_2 {
+    margin-top: 1rem;
+}
 .lighter {
     color: var(--light-text);
     font-weight: lighter;
@@ -153,8 +156,52 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 2rem auto;
+        max-width: 900px;
     }
     .benefits h2 {
         margin: 2rem;
     }
+}
+
+/* Benefits 3 units section */
+.benefits_3_units {
+    background-color: var(--box-shaddow-color);
+    padding: 1rem;
+}
+.benefits_3_content {
+    background-color: var(--light-color);
+    border: 1px solid var(--light-text);
+    border-radius: 10px;
+    padding: 1rem;
+}
+.benefits_3_content {
+    background-color: var(--light-color);
+    border: 1px solid var(--light-text);
+    border-radius: 10px;
+    padding: 3rem 1rem 1rem 1rem;
+    
+}
+.benefits_3_content img {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.benefits_3_image {
+    position: relative;
+    max-width: 200px;
+}
+.benefits_3_image::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: var(--benefit-pink-color);
+    position: absolute;
+    top: -25px;
+    right: -10px;
 }

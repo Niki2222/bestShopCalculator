@@ -386,3 +386,20 @@ h2 {
         padding-bottom: 0;
     }
 }
+
+/* Calculating total */
+@media screen and (min-width: 768px) {
+    .sectionDiv {
+        display: flex;
+    }
+    .formDiv {
+        width: 50%;
+    }
+    .calcDiv {
+        width: 50%;
+    }
+    .formDiv, .calcDiv {
+        padding: 1rem;
+        margin: 0 auto;
+    }
+}

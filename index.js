@@ -350,7 +350,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   infoDiv.appendChild(infoPhone);
   infoPhone.appendChild(infoPhoneImg);
   infoPhone.appendChild(infoPhoneSpan);
-
   formDiv.appendChild(formLabelName);
   formDiv.appendChild(formInputName);
   formDiv.appendChild(formLabelEmail);
@@ -435,20 +434,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   formBtnDiv.style.justifyContent = 'flex-end';
   formBtn.innerText = 'Send';
   formBtn.style.backgroundColor = 'rgb(0, 149, 255)';
+  formBtn.style.border = '1px solid rgb(0, 149, 255)';
   formBtn.style.width = '225px';
   formBtn.style.margin = '.5rem 0';
 
-  sectionContact.classList.add('sectionContact');
+  sectionContact.setAttribute('id', 'sectionContact');
   sectionContact.style.borderBottom = '1px solid gray';
   questionDiv.classList.add('questionDiv');
   formDiv.classList.add('formDiv');
-
-  // if (window.innerWidth > 768) {
-  //   sectionContact.style.display = 'flex';
-  //   sectionContact.style.justifyContent = 'space-between';
-  //   questionDiv.style.width = '50%';
-  //   formDiv.style.width = '50%';
-  // }
 
 });
 

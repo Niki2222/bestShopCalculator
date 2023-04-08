@@ -406,7 +406,7 @@ h2 {
 
 /* Contact info */
 @media screen and (min-width: 768px) {
-    .sectionContact {
+    #sectionContact {
         margin: 3rem;
         display: flex;
     }

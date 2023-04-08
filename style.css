@@ -403,3 +403,32 @@ h2 {
         margin: 0 auto;
     }
 }
+
+/* Contact info */
+@media screen and (min-width: 768px) {
+    .sectionContact {
+        margin: 3rem;
+        display: flex;
+    }
+    .questionDiv {
+        width: 50%;
+    }
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+footer h3 {
+    color: var(--menu-color);
+}
+footer span {
+    color: var(--light-text);
+    font-size: .7rem;
+}
+footer img {
+    margin: 0 .7rem;
+}

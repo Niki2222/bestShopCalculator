@@ -180,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       this.children[1].style.visibility === "visible" ? "hidden" : "visible";
   }
 
+  //Events and Calculation:
   liAccounting.style.display = 'none';
   liTerminal.style.display = 'none';
 
@@ -310,6 +311,147 @@ document.addEventListener("DOMContentLoaded", function (event) {
     total = total + value1 + value2 + value3 + value4 + value5;
     totalSpan2.innerText = `$${total}`;
   }
+
+
+  // Contact section
+  const sectionContact = document.createElement('section');
+  const questionDiv = document.createElement('div');
+  const formDiv = document.createElement('form');
+  const questH2 = document.createElement('h2');
+  const questP = document.createElement('p');
+  const formLabelName = document.createElement('label');
+  const formInputName = document.createElement('input');
+  const formLabelEmail = document.createElement('label');
+  const formInputEmail = document.createElement('input');
+  const formDivConsent = document.createElement('div');
+  const formInputConsent = document.createElement("input");
+  const formPDiv = document.createElement('div');
+  const formPConsent = document.createElement("p");
+  const formSpanConsent = document.createElement("span");
+  const infoDiv = document.createElement('div');
+  const infoMail = document.createElement('a');
+  const infoPhone = document.createElement('a');
+  const infoMailImg = document.createElement('img');
+  const infoPhoneImg = document.createElement('img');
+  const infoMailSpan = document.createElement('span');
+  const infoPhoneSpan = document.createElement('span');
+  const formBtnDiv = document.createElement('div');
+  const formBtn = document.createElement('button');
+
+  main.appendChild(sectionContact);
+  sectionContact.appendChild(questionDiv);
+  sectionContact.appendChild(formDiv);
+  questionDiv.appendChild(questH2);
+  questionDiv.appendChild(questP);
+  questionDiv.appendChild(infoDiv);
+  infoDiv.appendChild(infoMail);
+  infoMail.appendChild(infoMailImg);
+  infoMail.appendChild(infoMailSpan);
+  infoDiv.appendChild(infoPhone);
+  infoPhone.appendChild(infoPhoneImg);
+  infoPhone.appendChild(infoPhoneSpan);
+
+  formDiv.appendChild(formLabelName);
+  formDiv.appendChild(formInputName);
+  formDiv.appendChild(formLabelEmail);
+  formDiv.appendChild(formInputEmail);
+  formDiv.appendChild(formDivConsent);
+  formDiv.appendChild(formBtnDiv);
+  formBtnDiv.appendChild(formBtn);
+  formDivConsent.appendChild(formInputConsent);
+  formDivConsent.appendChild(formSpanConsent);
+  formDivConsent.appendChild(formPDiv);
+  formPDiv.appendChild(formPConsent);
+ 
+  sectionContact.style.padding = '1rem';
+  questH2.innerText = 'Any questions?';
+  questH2.style.marginBottom = '0';
+  questP.innerText = 'Leave your email address or contact us!';
+  formLabelName.innerText = 'NAME';
+  formLabelEmail.innerText = 'E-MAIL';
+
+
+  // Info divs
+  infoDiv.style.marginTop = '2rem';
+  infoMail.setAttribute('href', 'mailto:info@bestshop.xyz');
+  infoMail.style.marginBottom = '1rem';
+  infoMail.style.marginBottom = '1rem';
+  infoPhone.style.position = 'relative';
+  infoPhone.style.position = 'relative';
+  infoMailImg.style.position = 'absolute';
+  infoPhoneImg.style.position = 'absolute';
+  infoMailSpan.style.marginLeft = '2.5rem';
+  infoMailSpan.style.color = 'gray';
+  infoPhoneSpan.style.marginLeft = '2.5rem';
+  infoPhoneSpan.style.color = 'gray';
+
+  infoMailSpan.innerText = 'info@bestshop.xyz';
+  infoPhone.setAttribute('href', 'tel:123456789');
+  infoPhoneSpan.innerText = '123 456 789';
+
+  infoMail.style.display = 'block';
+  infoPhone.style.display = 'block';
+
+  infoMailImg.setAttribute('src', './images/Mail Icon.svg');
+  infoPhoneImg.setAttribute('src', './images/Phone Icon.svg');
+
+  function formLabelStyle(element) {
+    element.style.color = 'rgb(0, 149, 255)';
+    element.style.fontSize = '.8rem';
+    element.style.display = 'block';
+    element.style.marginTop = '1.5rem';
+  }
+  formLabelStyle(formLabelName);
+  formLabelStyle(formLabelEmail);
+
+  function formInputStyle(element) {
+    element.style.outline = '0';
+    element.style.border = '0';
+    element.style.borderBottom = '1px solid gray';
+    element.style.width = '100%';
+  }
+  formInputStyle(formInputName);
+  formInputStyle(formInputEmail);
+
+  formDivConsent.style.marginTop = '1.5rem';
+  formInputConsent.style.top = '5px';
+  formInputConsent.style.width = "20px";
+  formInputConsent.style.outline = "0";
+  formSpanConsent.style.left = '-15px';
+  formPConsent.style.display = "inline-block";
+  formPConsent.style.marginLeft = '1rem';
+  formPConsent.style.marginBottom = '1rem';
+  formPDiv.style.position = 'relative';
+  formPDiv.style.left = '20px';
+  formPDiv.style.top = '-20px';
+  formPDiv.style.paddingRight = '1rem';
+
+  spanStyle(formSpanConsent);
+  textStyle(formPConsent);
+  formPConsent.innerText = 'I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)';
+  formSpanConsent.style.visibility = "hidden";
+  formDivConsent.addEventListener("click", visibility);
+  formBtnDiv.style.display = 'flex';
+  formBtnDiv.style.justifyContent = 'flex-end';
+  formBtn.innerText = 'Send';
+  formBtn.style.backgroundColor = 'rgb(0, 149, 255)';
+  formBtn.style.width = '225px';
+  formBtn.style.margin = '.5rem 0';
+
+  sectionContact.classList.add('sectionContact');
+  sectionContact.style.borderBottom = '1px solid gray';
+  questionDiv.classList.add('questionDiv');
+  formDiv.classList.add('formDiv');
+
+  // if (window.innerWidth > 768) {
+  //   sectionContact.style.display = 'flex';
+  //   sectionContact.style.justifyContent = 'space-between';
+  //   questionDiv.style.width = '50%';
+  //   formDiv.style.width = '50%';
+  // }
+
 });
+
+ 
 
 
